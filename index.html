@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Tale Stories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 0.5rem;
+        }
+        nav button {
+            background-color: #555;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            margin: 0 0.5rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        nav button:hover {
+            background-color: #666;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .story {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: none;
+        }
+        .story.active {
+            display: block;
+        }
+        .story img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>AI pohádky na dobrou noc</h1>
+    </header>
+    <nav>
+        <button onclick="showStory(0)">Králičí království a sluneční amulet</button>
+        <button onclick="showStory(1)">Story 2</button>
+        <button onclick="showStory(2)">Story 3</button>
+    </nav>
+    <main>
+        <div id="story1" class="story active">
+            <h2>Králičí království a sluneční amulet</h2>
+            <p>Bylo nebylo. V králičím království, kde pole byla vždy zalitá slunečním světlem a louky plné barevných květů, žili králíci šťastně pod vládou moudré královny Luny. Všechno bylo krásné a plné života, dokud jednoho dne nenastal záhadný úkaz. Obloha se najednou zahalila do tmavých mraků a slunce zmizelo. Dny se proměnily v nekonečnou noc, a králíci začali mít strach.</p>
+                
+            <p>Malý králík jménem Timík, který měl zvídavé oči a kurážné srdce, si povšiml, že království je stále temnější a že královna Luna začíná ztrácet naději. Když jednoho večera poslouchal staré příběhy od své babičky, uslyšel o magickém amuletu, který prý dokáže přivolat sluneční světlo i v té nejtemnější hodině. Tento sluneční amulet se prý skrývá hluboko v jeskyni za temným lesem.</p>
+                
+            <p>„Já ten amulet najdu!“ vykřikl Timík a rozhodl se, že vyrazí na dobrodružství, aby zachránil své království před věčnou tmou. Vzal si s sebou batůžek s mrkví, lucerničku a malý šátek od babičky pro štěstí.</p>
+                
+            <p>Timík cestoval dlouho, až dorazil k temnému lesu. Jakmile do něj vstoupil, svět kolem něj se změnil. Vzduch byl hustší a chladnější, vítr mu šuměl kolem uší a větve stromů se skláněly tak nízko, že se mu zdálo, jako by ho sledovaly. Les byl tak temný, že musel zapálit svou lucerničku, která házela drobný paprsek světla na cestu.</p>
+
+            <img src="kralik.png?height=300&width=500" alt="Králík v lese">
+                
+            <p>První, co Timík spatřil, byly stíny, které tančily na zemi a mezi kmeny stromů. Při každém kroku se stíny měnily, jako by ho chtěly zmást. Z dálky slyšel podivné zvuky: houkání sov, praskání větviček, a občas dokonce jemné šepotání, které jako by říkalo jeho jméno. Timík si ale připomněl, proč je na této cestě, a pokračoval dál.</p>
+                
+            <p>Najednou před sebou spatřil světélka, která tančila ve vzduchu. Byla to malá lesní víla jménem Minka. Minka se na něj podívala a zašeptala: „Co tu děláš, králíčku? Tohle není místo pro malé králíky.“</p>
+                
+            <p>Timík jí vysvětlil, že hledá sluneční amulet, aby zachránil své království. Víla se zamyslela a s úsměvem řekla: „Tak to jsi odvážný, Timíku! Ale dávej si pozor na Starého dubáka, strážce lesa, který nerad vidí cizince. Půjdeš-li správnou cestou, možná tě nechá projít.“</p>
+                
+            <p>Když se s Minkou rozloučil, kráčel dál a cestou zahlédl prastarý dub, mohutný a obrostlý mechem. Najednou dub otevřel své oči! „Kdo narušuje můj les?“ zahřměl mohutný hlas. Timík se nejdřív lekl, ale pak se uklonil a zdvořile vysvětlil, proč je tady.</p>
+                
+            <p>Dubák se zamračil, ale když viděl Timíkovo odhodlání, řekl: „Pokud chceš projít mým lesem, musíš složit zkoušku. Najdi a posbírej sedm kouzelných žaludů, které jsou schované po lese. Jen pak ti ukážu cestu.“</p>
+                
+            <p>Timík se vydal hledat žaludy. Každý kouzelný žalud měl svou zvláštnost. První našel u jezírka, kde rostly zářivě modré květiny, které zpívaly jemnou melodii, když kolem nich prošel. Druhý žalud našel na malé mýtině, kde objevily králičí stopy, které svítily ve tmě. Třetí žalud visel na stříbrném pavučinovém vláknu, které spřádal starý pavouk; ten mu popřál štěstí a dal mu ještě jeden malý žalud pro štěstí.</p>
+                
+            <p>Čtvrtý žalud se schovával pod listem, který střežila malá veverka. Ta mu řekla: „Už jsem ho skoro měla, ale pokud ho potřebuješ víc, vezmi si ho!“ Pátý našel ve větvích stromu, který sám mrmlal starou píseň lesa. Šestý žalud objevil v díře mezi kořeny, kde ho hlídala malá myška. A konečně sedmý žalud našel u tichého potoka, kde mu jeho odraz ukázal, že už má všechny.</p>
+                
+            <p>	Timík se vrátil ke Starému dubákovi a předal mu žaludy. Dubák se usmál a prohlásil: „Dobře jsi splnil mou zkoušku. Přejdi přes můj kořen a najdeš cestu k jeskyni.“</p>
+                
+            <p>A tak Timík překonal všechny zkoušky a dobrodružství strašidelného lesa. S odvahou, přátelskostí a ochotou naslouchat se dostal až na konec temného lesa a spatřil jeskyni, kde ležel zlatý amulet s nádherným slunečním symbolem. Když ho Timík vzal do tlapek, pocítil, jak ho naplňuje teplo a síla.</p>
+                
+            <p>„Sluneční amulet!“ zašeptal nadšeně a rozběhl se zpátky do království. Cesta zpět byla obtížná a temná, ale amulet v jeho tlapkách zářil a ukazoval mu cestu.</p>
+                
+            <p>Když dorazil domů, celé království bylo ponořené do temnoty a královna Luna smutně stála na balkóně. Timík zvedl amulet nad hlavu a zvolal: „Slunce, zhasni tuto temnotu a vrať nám světlo!“</p>
+                
+            <p>Amulet začal zářit a z jeho světla se zvedl sluneční paprsek, který prolomil temné mraky. Slunce se vrátilo na oblohu a království bylo opět zalité světlem. Královna Luna Timíkovi děkovala a všichni králíci se radovali a oslavovali návrat slunce.</p>
+                
+            <p>Od toho dne byl Timík v králičím království znám jako hrdina, který měl odvahu čelit temnotě. A sluneční amulet? Ten zůstal vystavený v královnině síni jako připomínka toho, že i malý králík může dokázat velké věci, když má odhodlání a dobrou duši.</p>
+
+        </div>
+        <div id="story2" class="story">
+            <h2>The Brave Little Sailboat</h2>
+            <img src="/placeholder.svg?height=300&width=500" alt="Little Sailboat">
+            <p>In a cozy harbor nestled along the coast, a small red and white sailboat named Pip bobbed gently in the waves. While the larger boats boasted of their grand adventures on the high seas, Pip dreamed of one day sailing beyond the safety of the bay...</p>
+        </div>
+        <div id="story3" class="story">
+            <h2>The Time-Traveling Teddy Bear</h2>
+            <img src="/placeholder.svg?height=300&width=500" alt="Teddy Bear">
+            <p>In a dusty attic filled with forgotten treasures, an old teddy bear named Chronos sat on a shelf, his button eyes gleaming with secrets. Unbeknownst to his young owner, Chronos possessed the extraordinary ability to travel through time...</p>
+        </div>
+    </main>
+    <script>
+        function showStory(index) {
+            const stories = document.querySelectorAll('.story');
+            stories.forEach((story, i) => {
+                if (i === index) {
+                    story.classList.add('active');
+                } else {
+                    story.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
