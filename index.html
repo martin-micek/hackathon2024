@@ -9,7 +9,10 @@
 </head>
 <body>
     <header>
-        <h1>Pohádky na dobrou noc</h1>
+        <div class="header-content">
+            <h1>Pohádky na dobrou noc</h1>
+        </div>
+        <div id="fairy-container"></div>
     </header>
     <nav>
         <button onclick="showStory(0)">Pohádka o králíkovi</button>
@@ -150,6 +153,32 @@
                     story.classList.remove('active');
                 }
             });
+        }
+    </script>
+    <script>
+        function createFairy() {
+            const fairy = document.createElement('div');
+            fairy.className = 'fairy';
+            const startX = Math.random() * window.innerWidth;
+            const startY = Math.random() * 200;
+            fairy.style.left = startX + 'px';
+            fairy.style.top = startY + 'px';
+            const trail = document.createElement('div');
+            trail.className = 'fairy-trail';
+            fairy.appendChild(trail);
+            const duration = 3 + Math.random() * 4;
+            const delay = Math.random() * 2;
+            fairy.style.animationDuration = `${duration}s`;
+            fairy.style.animationDelay = `${delay}s`;
+            document.getElementById('fairy-container').appendChild(fairy);
+            setTimeout(() => {
+                fairy.remove();
+                createFairy();
+            }, duration * 1000);
+        }
+        // Create initial fairies
+        for (let i = 0; i < 15; i++) {
+            setTimeout(() => createFairy(), i * 200);
         }
     </script>
 </body>
