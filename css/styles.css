@@ -221,3 +221,36 @@
         .seekBar {
           width: 100px;
         }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            nav {
+                padding: 0.5rem;
+            }
+
+            nav button {
+                padding: 10px 15px;
+                font-size: 0.9em;
+                margin: 0 0.25rem;
+            }
+
+            header {
+                padding: 1rem;
+                min-height: 100px;
+            }
+
+            main {
+                padding: 1rem;
+            }
+
+            .story {
+                padding: 1rem;
+            }
+        }
