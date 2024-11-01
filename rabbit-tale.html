@@ -1,12 +1,14 @@
-<h2>Králičí království a sluneční amulet</h2>
+			<audio id="audioPlayer1" src="mp3/rabbit-tale.mp3" type="audio/mpeg"></audio>
 
-<audio id="audioPlayer" src="rabbit-tale.mp3" type="audio/mpeg"></audio>
+			<!-- Button to play audio -->
+			<div class="tts-controls">
+			<button onclick="playAudio1()" class="tts-button play-button">Přehrát</button>
+			<button onclick="stopAudio1()" class="tts-button pause-button">Stop</button>
+			<!-- Seek bar -->
+			<input type="range" id="seekBar1" class="seekBar" value="0" max="100" step="1" oninput="seekAudio1()">
+			</div>
 
-<!-- Button to play audio -->
-<div class="tts-controls">
-<button onclick="playAudio()" class="tts-button play-button">Přehrát obsah</button>
-<button onclick="stopAudio()" class="tts-button pause-button">Stop</button>
-</div>
+			<h2>Králičí království a sluneční amulet</h2>
 
             <p>Bylo nebylo. V králičím království, kde pole byla vždy zalitá slunečním světlem a louky plné barevných květů, žili králíci šťastně pod vládou moudré královny Luny. Všechno bylo krásné a plné života, dokud jednoho dne nenastal záhadný úkaz. Obloha se najednou zahalila do tmavých mraků a slunce zmizelo. Dny se proměnily v nekonečnou noc, a králíci začali mít strach.</p>
                 
@@ -17,7 +19,7 @@
             <p>Timík cestoval dlouho, až dorazil k temnému lesu. Jakmile do něj vstoupil, svět kolem něj se změnil. Vzduch byl hustší a chladnější, vítr mu šuměl kolem uší a větve stromů se skláněly tak nízko, že se mu zdálo, jako by ho sledovaly. Les byl tak temný, že musel zapálit svou lucerničku, která házela drobný paprsek světla na cestu.</p>
 
             <div class="image-container">
-                <img src="rabbit-forest.png" height="300" width="500" alt="Králík v lese">
+                <img src="img/rabbit-forest.png" height="300" width="500" alt="Králík v lese">
             </div>
                 
             <p>První, co Timík spatřil, byly stíny, které tančily na zemi a mezi kmeny stromů. Při každém kroku se stíny měnily, jako by ho chtěly zmást. Z dálky slyšel podivné zvuky: houkání sov, praskání větviček, a občas dokonce jemné šepotání, které jako by říkalo jeho jméno. Timík si ale připomněl, proč je na této cestě, a pokračoval dál.</p>
@@ -41,7 +43,7 @@
             <p>„Sluneční amulet!“ zašeptal nadšeně a rozběhl se zpátky do království. Cesta zpět byla obtížná a temná, ale amulet v jeho tlapkách zářil a ukazoval mu cestu.</p>
 
             <div class="image-container">
-                <img src="rabbit-with-amulet.png" height="200" width="500" alt="Králík s amuletem">
+                <img src="img/rabbit-with-amulet.png" height="200" width="500" alt="Králík s amuletem">
             </div>
             
             <p>Když dorazil domů, celé království bylo ponořené do temnoty a královna Luna smutně stála na balkóně. Timík zvedl amulet nad hlavu a zvolal: „Slunce, zhasni tuto temnotu a vrať nám světlo!“</p>

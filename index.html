@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pohádky na dobrou noc</title>
-    <link rel="icon" type="image/x-icon" href="shooting-star.png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="img/shooting-star.png">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -27,6 +27,7 @@
         <div id="story3" class="story">
         </div>
     </main>
+	
     <script>
         fetch("/rabbit-tale.html")
             .then(response => response.text())
@@ -37,6 +38,7 @@
         fetch("/umbrella-tale.html")
             .then(response => response.text())
             .then(html => document.getElementById("story3").innerHTML = html);
+			
         function showStory(index) {
             const stories = document.querySelectorAll('.story');
             stories.forEach((story, i) => {
@@ -47,8 +49,7 @@
                 }
             });
         }
-    </script>
-    <script>
+
         function createFairy() {
             const fairy = document.createElement('div');
             fairy.className = 'fairy';
@@ -73,17 +74,66 @@
         for (let i = 0; i < 15; i++) {
             setTimeout(() => createFairy(), i * 200);
         }
-
-		function playAudio() {
-			const audio = document.getElementById("audioPlayer");
-			audio.play();
-		}
 		
-		function stopAudio() {
-			const audio = document.getElementById("audioPlayer");
-			audio.pause();     // Pause the audio
-			audio.currentTime = 0; // Reset to the beginning
-		}		
+		function playAudio1() {
+			document.getElementById("audioPlayer1").play();
+		}
+		function playAudio2() {
+			document.getElementById("audioPlayer2").play();
+		}
+		function playAudio3() {
+			document.getElementById("audioPlayer3").play();
+		}
+
+		function stopAudio1() {
+			document.getElementById("audioPlayer1").pause();
+			document.getElementById("audioPlayer1").currentTime = 0;
+			document.getElementById("seekBar1").value = 0; // Reset seek bar to start
+		}
+
+		function stopAudio2() {
+			document.getElementById("audioPlayer2").pause();
+			document.getElementById("audioPlayer2").currentTime = 0;
+			document.getElementById("seekBar1").value = 0; // Reset seek bar to start
+		}
+
+		function stopAudio3() {
+			document.getElementById("audioPlayer3").pause();
+			document.getElementById("audioPlayer3").currentTime = 0;
+			document.getElementById("seekBar1").value = 0; // Reset seek bar to start
+		}
+
+		// Seek audio when the seek bar is moved
+		function seekAudio1() {
+			const seekTo = (document.getElementById("seekBar1").value / 100) * document.getElementById("audioPlayer1").duration;
+			document.getElementById("audioPlayer1").currentTime = seekTo;
+		}
+		function seekAudio2() {
+			const seekTo = (document.getElementById("seekBar2").value / 100) * document.getElementById("audioPlayer2").duration;
+			document.getElementById("audioPlayer2").currentTime = seekTo;
+		}
+		function seekAudio3() {
+			const seekTo = (document.getElementById("seekBar3").value / 100) * document.getElementById("audioPlayer3").duration;
+			document.getElementById("audioPlayer3").currentTime = seekTo;
+		}
+
+		// Update seek bar as audio plays
+		document.getElementById("audioPlayer1").addEventListener("timeupdate", () => {
+			const progress = (document.getElementById("audioPlayer1").currentTime / document.getElementById("audioPlayer1").duration) * 100;
+			document.getElementById("seekBar1").value = progress;
+		});
+		// Update seek bar as audio plays
+		document.getElementById("audioPlayer2").addEventListener("timeupdate", () => {
+			const progress = (document.getElementById("audioPlayer2").currentTime / document.getElementById("audioPlayer2").duration) * 100;
+			document.getElementById("seekBar2").value = progress;
+		});
+		// Update seek bar as audio plays
+		document.getElementById("audioPlayer3").addEventListener("timeupdate", () => {
+			const progress = (document.getElementById("audioPlayer3").currentTime / document.getElementById("audioPlayer3").duration) * 100;
+			document.getElementById("seekBar3").value = progress;
+		});
+
     </script>
+
 </body>
 </html>
