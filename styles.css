@@ -180,3 +180,40 @@
             margin-bottom: 1rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
+        
+        .tts-controls {
+          display: flex;
+          gap: 10px;
+        }
+
+        .tts-button {
+          border: none;
+          padding: 12px 15px 12px 35px;
+          border-radius: 20px;
+          font-size: 1em;
+          cursor: pointer;
+          transition: background-color 0.3s, transform 0.2s;
+          background-size: 20px auto;
+          background-repeat: no-repeat;
+          background-position: 10px center;
+        }
+
+        .tts-button:hover {
+          background-color: #cad4df;
+        }
+
+        .tts-button:active {
+          transform: scale(0.95); /* Slight press-down effect */
+        }
+
+        .play-button {
+          background-image: url('/volume-high.png');
+        }
+
+        .pause-button {
+          background-image: url('/audio-stop.png');
+        }
+
+        .tts-button:focus {
+          outline: 2px solid #ffc107; /* Highlighted outline for accessibility */
+        }
